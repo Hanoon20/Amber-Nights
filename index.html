@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sajath &amp; Aalya — Wedding Invitation</title>
+<title>Aalya &amp; Sajath — Wedding Invitation</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Great+Vibes&family=Amiri:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
@@ -747,10 +747,11 @@ html.locked, html.locked body{overflow:hidden;height:100%;}
   transition:opacity .4s ease .35s;
 }
 .envelope.opened .envelope-card{
-  animation:card-rise .7s cubic-bezier(0.22,1,0.36,1) .45s forwards;
+  z-index:10;
+  animation:card-rise .8s cubic-bezier(0.22,1,0.36,1) .45s forwards;
 }
 @keyframes card-rise{
-  to{transform:translateY(-30%) scale(1.05);}
+  to{transform:translateY(-34%) scale(1.22);box-shadow:0 20px 50px rgba(74,44,23,0.35);}
 }
 
 .tap-to-open{
@@ -811,7 +812,7 @@ html.locked, html.locked body{overflow:hidden;height:100%;}
     </div>
 
     <button type="button" id="tapToOpenBtn" class="tap-to-open op-reveal">Tap to Open</button>
-    <p class="opening-footnote op-reveal">Sajath &amp; Aalya Wedding Invitation</p>
+    <p class="opening-footnote op-reveal">Aalya &amp; Sajath · 1st October 2026</p>
   </div>
 </section>
 
@@ -832,7 +833,7 @@ html.locked, html.locked body{overflow:hidden;height:100%;}
     <div class="crescent">☾ ✦ ☽</div>
     <div class="bismillah">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
     <div class="hero-sub">Together with their families</div>
-    <div class="couple-names">Sajath <span class="amp">&amp;</span>Aalya</div>
+    <div class="couple-names">Aalya<span class="amp">&amp;</span>Sajath</div>
     <div class="hero-date">Saturday · <strong>1st October 2026</strong> · 12:30 PM</div>
     <div class="hero-venue">Nuhman Hall, Puttalam</div>
     <div class="scroll-cue">Scroll to Begin ↓</div>
