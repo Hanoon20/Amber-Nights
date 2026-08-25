@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aalya &amp; Sajath — Wedding Invitation</title>
+<title>Fathima &amp; Rinas — Wedding Invitation</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Great+Vibes&family=Amiri:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
@@ -271,7 +271,7 @@ section{
     flex-wrap:nowrap;
     gap:8px;
     max-width:100%;
-    padding:0 6px;
+    padding:0 18px;
   }
   .count-box{
     min-width:0;
@@ -279,8 +279,12 @@ section{
     padding:14px 4px;
     border-radius:10px;
   }
-  .count-num{font-size:clamp(20px,7vw,30px);}
-  .count-label{font-size:8.5px;letter-spacing:1px;}
+  .count-num{font-size:clamp(18px,6.2vw,28px);}
+  .count-label{font-size:8px;letter-spacing:0.5px;}
+}
+@media(max-width:360px){
+  .countdown{padding:0 12px;gap:6px;}
+  .count-box{padding:12px 2px;}
 }
 .count-box{
   background:linear-gradient(160deg, rgba(176,141,87,0.14), rgba(255,255,255,0.4));
@@ -450,48 +454,35 @@ section{
   box-shadow:0 14px 32px rgba(176,141,87,0.5);
 }
 
-/* ===== Gallery ===== */
-.gallery-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:14px;
-  margin-top:40px;
-}
-@media(max-width:680px){.gallery-grid{grid-template-columns:repeat(2,1fr);}}
-.gallery-item{
-  aspect-ratio:1/1;
-  border-radius:14px;
+/* ===== How We Met ===== */
+.story-card{
+  max-width:680px;
+  margin:36px auto 0;
+  background:linear-gradient(160deg, rgba(176,141,87,0.10), rgba(255,255,255,0.4));
   border:1px solid var(--gold);
-  background:
-    linear-gradient(160deg, rgba(176,141,87,0.18), rgba(255,255,255,0.5));
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  gap:8px;
-  color:var(--gold-deep);
+  border-radius:20px;
+  padding:44px 34px;
+  text-align:center;
   position:relative;
   overflow:hidden;
-  transition:transform .4s ease, box-shadow .4s ease;
 }
-.gallery-item:hover{
-  transform:translateY(-6px) scale(1.02);
-  box-shadow:0 14px 30px rgba(176,141,87,0.3);
+.story-card::before{
+  content:"";
+  position:absolute;inset:8px;
+  border:1px solid rgba(176,141,87,0.35);
+  border-radius:14px;
+  pointer-events:none;
 }
-.gallery-item .g-icon{font-size:26px;}
-.gallery-item .g-label{
-  font-family:'Poppins',sans-serif;
-  font-size:10px;
-  letter-spacing:1.5px;
-  text-transform:uppercase;
+.story-icon{
+  font-size:34px;
+  color:var(--gold-deep);
+  margin-bottom:16px;
+  display:inline-block;
+}
+.story-text{
+  font-size:18px;
+  line-height:2;
   color:var(--brown);
-}
-.gallery-note{
-  text-align:center;
-  margin-top:22px;
-  font-family:'Poppins',sans-serif;
-  font-size:12px;
-  color:var(--brown-light);
   font-style:italic;
 }
 
@@ -519,7 +510,15 @@ section{
   font-family:'Great Vibes',cursive;
   font-size:30px;
   color:var(--brown-deep);
-  margin-bottom:18px;
+  margin-bottom:6px;
+}
+.family-location{
+  font-family:'Poppins',sans-serif;
+  font-size:11px;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+  color:var(--brown-light);
+  margin-bottom:16px;
 }
 .family-role{
   font-family:'Poppins',sans-serif;
@@ -565,6 +564,24 @@ footer{
   text-transform:uppercase;
   color:var(--gold-deep);
   opacity:0.8;
+}
+
+.designer-credit{
+  text-align:center;
+  padding:0 20px 40px;
+  position:relative;
+  z-index:2;
+}
+.designer-credit p{
+  font-family:'Poppins',sans-serif;
+  font-size:11.5px;
+  letter-spacing:1px;
+  color:var(--brown-light);
+  opacity:0.85;
+}
+.designer-credit strong{
+  color:var(--gold-deep);
+  font-weight:600;
 }
 
 /* ===== Music toggle ===== */
@@ -806,13 +823,13 @@ html.locked, html.locked body{overflow:hidden;height:100%;}
         <span class="envelope-card">
           <span class="envelope-card-line"></span>
           <span class="envelope-card-line"></span>
-          <span class="envelope-card-monogram">A &amp; S</span>
+          <span class="envelope-card-monogram">F &amp; R</span>
         </span>
       </button>
     </div>
 
     <button type="button" id="tapToOpenBtn" class="tap-to-open op-reveal">Tap to Open</button>
-    <p class="opening-footnote op-reveal">Aalya &amp; Sajath · 1st October 2026</p>
+    <p class="opening-footnote op-reveal">Fathima &amp; Rinas · 6th October 2026</p>
   </div>
 </section>
 
@@ -833,9 +850,9 @@ html.locked, html.locked body{overflow:hidden;height:100%;}
     <div class="crescent">☾ ✦ ☽</div>
     <div class="bismillah">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
     <div class="hero-sub">Together with their families</div>
-    <div class="couple-names">Aalya<span class="amp">&amp;</span>Sajath</div>
-    <div class="hero-date">Saturday · <strong>1st October 2026</strong> · 12:30 PM</div>
-    <div class="hero-venue">Nuhman Hall, Puttalam</div>
+    <div class="couple-names">Fathima<span class="amp">&amp;</span>Rinas</div>
+    <div class="hero-date">Tuesday · <strong>6th October 2026</strong> · 12:30 PM</div>
+    <div class="hero-venue">RJ Hall, Thillaiyadi, Puttalam</div>
     <div class="scroll-cue">Scroll to Begin ↓</div>
   </div>
 </section>
@@ -857,18 +874,18 @@ html.locked, html.locked body{overflow:hidden;height:100%;}
 <!-- EVENTS -->
 <section id="events" class="reveal">
   <div class="section-kicker">Join Us For</div>
-  <h2 class="section-title">Wedding Events</h2>
+  <h2 class="section-title">Waleema Function</h2>
   <div class="ornament-divider"><span>❖</span></div>
   <div class="events-grid">
     <div class="event-card">
       <span class="event-icon">🍽️</span>
       <h3>Lunch Service Begins</h3>
-      <p><span>Date:</span> 1st October 2026<br><span>Time:</span> 12:30 PM<br><span>Venue:</span> Nuhman Hall, Puttalam</p>
+      <p><span>Date:</span> 6th October 2026<br><span>Time:</span> 12:30 PM<br><span>Venue:</span> RJ Hall, Thillaiyadi, Puttalam</p>
     </div>
     <div class="event-card">
       <span class="event-icon">💍</span>
       <h3>Bride &amp; Groom Arrival</h3>
-      <p><span>Date:</span> 1st October 2026<br><span>Time:</span> 1:00 PM<br><span>Venue:</span> Nuhman Hall, Puttalam</p>
+      <p><span>Date:</span> 6th October 2026<br><span>Time:</span> 1:00 PM<br><span>Venue:</span> RJ Hall, Thillaiyadi, Puttalam</p>
     </div>
   </div>
 </section>
@@ -880,26 +897,21 @@ html.locked, html.locked body{overflow:hidden;height:100%;}
   <div class="ornament-divider"><span>❖</span></div>
   <div class="location-card">
     <span class="location-pin">📍</span>
-    <h3>Nuhman Hall, Puttalam</h3>
-    <p>Join us at Nuhman Hall for the lunch service and the bride &amp; groom's arrival on 1st October 2026. Tap below for directions on Google Maps.</p>
+    <h3>RJ Hall, Thillaiyadi, Puttalam</h3>
+    <p>Join us at RJ Hall for the Waleema lunch service and the bride &amp; groom's arrival on 6th October 2026. Tap below for directions on Google Maps.</p>
     <a class="location-btn" href="https://maps.app.goo.gl/6GLXdCW4yFhimGHj9" target="_blank" rel="noopener">🗺️ Get Directions</a>
   </div>
 </section>
 
-<!-- GALLERY -->
-<section id="gallery" class="reveal">
-  <div class="section-kicker">Moments</div>
-  <h2 class="section-title">Our Gallery</h2>
+<!-- HOW WE MET -->
+<section id="how-we-met" class="reveal">
+  <div class="section-kicker">Our Story</div>
+  <h2 class="section-title">How We Met</h2>
   <div class="ornament-divider"><span>❖</span></div>
-  <div class="gallery-grid">
-    <div class="gallery-item"><span class="g-icon">📷</span><span class="g-label">Photo 1</span></div>
-    <div class="gallery-item"><span class="g-icon">📷</span><span class="g-label">Photo 2</span></div>
-    <div class="gallery-item"><span class="g-icon">📷</span><span class="g-label">Photo 3</span></div>
-    <div class="gallery-item"><span class="g-icon">📷</span><span class="g-label">Photo 4</span></div>
-    <div class="gallery-item"><span class="g-icon">📷</span><span class="g-label">Photo 5</span></div>
-    <div class="gallery-item"><span class="g-icon">📷</span><span class="g-label">Photo 6</span></div>
+  <div class="story-card">
+    <span class="story-icon">🤲</span>
+    <p class="story-text">Ours is a story written first by our families, and then by our hearts. Through their blessings and du'a, we were brought together — two strangers introduced with care, who found in each other a quiet comfort and an easy friendship. What began as an arranged meeting slowly grew into trust, respect, and a warmth we didn't expect to find so soon. With every conversation, we became more certain that this was the beginning of something beautiful. Now, with our families united and our hearts at peace, we begin our forever — grateful that love found us exactly the way it was meant to.</p>
   </div>
-  <p class="gallery-note">Add your favourite photos here to bring this gallery to life ✨</p>
 </section>
 
 <!-- FAMILY -->
@@ -911,6 +923,7 @@ html.locked, html.locked body{overflow:hidden;height:100%;}
     <div class="family-card">
       <div class="family-icon">👰</div>
       <h3>Bride's Family</h3>
+      <div class="family-location">Mannar, Tharapuram</div>
       <div class="family-role">Father of the Bride</div>
       <div class="family-name">Mahroof</div>
       <div class="family-role">Mother of the Bride</div>
@@ -919,6 +932,7 @@ html.locked, html.locked body{overflow:hidden;height:100%;}
     <div class="family-card">
       <div class="family-icon">🤵</div>
       <h3>Groom's Family</h3>
+      <div class="family-location">Puttalam, Thillaiyadi, Al-Qasimiy City</div>
       <div class="family-role">Father of the Groom</div>
       <div class="family-name">Haneef Haji</div>
       <div class="family-role">Mother of the Groom</div>
@@ -931,9 +945,14 @@ html.locked, html.locked body{overflow:hidden;height:100%;}
 <footer class="reveal">
   <div class="ornament-divider"><span>❖</span></div>
   <p class="footer-msg">"We are beyond grateful to have you as part of our special day. Your presence turns this celebration into a lifelong memory. Come, eat, dance, and bless us as we begin our forever together!"</p>
-  <div class="footer-names">Aalya &amp; Sajath</div>
-  <div class="footer-note">1st October 2026 · Nuhman Hall, Puttalam</div>
+  <div class="footer-names">Fathima &amp; Rinas</div>
+  <div class="footer-note">6th October 2026 · RJ Hall, Thillaiyadi, Puttalam</div>
 </footer>
+
+<div class="designer-credit reveal">
+  <div class="ornament-divider"><span>❖</span></div>
+  <p>Designed with ♥ by <strong>Hanoon</strong> · 071 690 3578</p>
+</div>
 
 </div><!-- /#mainInvitation -->
 
@@ -1024,7 +1043,7 @@ const io = new IntersectionObserver((entries)=>{
 revealEls.forEach(el=>io.observe(el));
 
 /* ===================== Countdown ===================== */
-const weddingDate = new Date('2026-10-01T12:30:00');
+const weddingDate = new Date('2026-10-06T12:30:00');
 function updateCountdown(){
   const now = new Date();
   let diff = weddingDate - now;
@@ -1043,13 +1062,13 @@ setInterval(updateCountdown, 1000);
 
 /* ===================== Save the Date ===================== */
 document.getElementById('saveDateBtn')?.addEventListener('click', ()=>{
-  const start = new Date('2026-10-01T12:30:00');
-  const end = new Date('2026-10-01T18:30:00'); // approx 6hr celebration block
+  const start = new Date('2026-10-06T12:30:00');
+  const end = new Date('2026-10-06T18:30:00'); // approx 6hr celebration block
   const fmt = d => d.toISOString().replace(/[-:]/g,'').split('.')[0]+'Z';
 
-  const title = "Aalya & Sajath's Wedding";
-  const details = "Lunch service begins 12:30 PM, Bride & Groom arrival 1:00 PM. Join us at Nuhman Hall, Puttalam to celebrate!";
-  const location = "Nuhman Hall, Puttalam";
+  const title = "Fathima & Rinas's Wedding";
+  const details = "Lunch service begins 12:30 PM, Bride & Groom arrival 1:00 PM. Join us at RJ Hall, Thillaiyadi, Puttalam to celebrate!";
+  const location = "RJ Hall, Thillaiyadi, Puttalam";
 
   const ua = navigator.userAgent || navigator.vendor || window.opera;
   const isIOS = /iPad|iPhone|iPod/.test(ua) && !window.MSStream;
