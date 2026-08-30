@@ -302,30 +302,6 @@ section{
   flex-wrap:wrap;
   margin-top:36px;
 }
-@media(max-width:520px){
-  .countdown{
-    flex-wrap:nowrap;
-    justify-content:center;
-    gap:10px;
-    max-width:100%;
-    padding:0 26px;            /* clear breathing room from screen edges */
-    margin-top:28px;
-  }
-  .count-box{
-    min-width:0;
-    flex:0 1 66px;             /* compact & centered — no longer stretches to the edges */
-    padding:12px 6px;
-    border-radius:12px;
-  }
-  .count-box::before{top:6px;left:6px;right:6px;bottom:6px;border-radius:7px;}
-  .count-num{font-size:clamp(19px,5.4vw,24px);}
-  .count-label{font-size:8px;letter-spacing:0.8px;margin-top:4px;}
-}
-@media(max-width:360px){
-  .countdown{padding:0 18px;gap:7px;}
-  .count-box{flex-basis:58px;padding:10px 4px;}
-  .count-num{font-size:21px;}
-}
 .count-box{
   background:linear-gradient(160deg, rgba(176,141,87,0.14), rgba(255,255,255,0.4));
   border:1px solid var(--gold);
@@ -359,6 +335,33 @@ section{
   text-transform:uppercase;
   color:var(--brown-light);
   margin-top:6px;
+}
+
+/* Mobile countdown — placed AFTER the base rules so these overrides win.
+   min-width/flex are guarded so the boxes stay compact and never touch the edges. */
+@media(max-width:520px){
+  .countdown{
+    flex-wrap:nowrap;
+    justify-content:center;
+    gap:10px;
+    max-width:100%;
+    padding:0 26px;
+    margin-top:28px;
+  }
+  .count-box{
+    min-width:0 !important;
+    flex:0 1 64px !important;   /* compact & centered — never stretches to the edges */
+    padding:12px 6px;
+    border-radius:12px;
+  }
+  .count-box::before{top:6px;left:6px;right:6px;bottom:6px;border-radius:7px;}
+  .count-num{font-size:clamp(19px,5.2vw,24px);}
+  .count-label{font-size:8px;letter-spacing:0.8px;margin-top:4px;}
+}
+@media(max-width:360px){
+  .countdown{padding:0 16px;gap:7px;}
+  .count-box{flex:0 1 56px !important;padding:10px 4px;}
+  .count-num{font-size:21px;}
 }
 
 .save-date-btn{
